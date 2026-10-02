@@ -1,0 +1,46 @@
+/* Tùy chỉnh CSS phụ trợ cho MDBootstrap */
+body {
+    font-family: 'Roboto', sans-serif;
+    scroll-behavior: smooth;
+}
+
+/* Hero Section */
+.hero-bg {
+    background-image: url('https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=1920&q=80');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    height: 100vh;
+}
+
+/* Điều chỉnh khoảng cách navbar */
+.navbar {
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+/* Tuỳ chỉnh Testimonial Avatar */
+.testimonial .avatar img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+}
+
+/* Hiệu ứng mượt mà khi hover vào Card */
+.card-cascade.wider:hover {
+    transform: translateY(-10px);
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Đổi lại màu đỏ đậm đặc trưng của CodeGym (nếu cần) */
+.bg-danger, .red.darken-2 {
+    background-color: #c92127 !important;
+}
+
+.text-danger, .red-text {
+    color: #c92127 !important;
+}
+
+.btn-danger {
+    background-color: #c92127 !important;
+}
