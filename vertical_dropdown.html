@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dropdown Menu Dọc</title>
+    <style>
+        /* Đặt cố định loại font chữ và căn lề cho khung, danh sách */
+        body {
+            font-family: Arial, sans-serif;
+        }
+        
+        ul, li {
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Định dạng các phần tử trong danh sách (li) */
+        li {
+            list-style: none; /* Bỏ ký hiệu đánh dấu đầu dòng */
+            position: relative; /* Đặt danh sách con cạnh phần tử chứa nó */
+            width: 120px; /* Cố định chiều rộng (nới rộng chút để chữ không bị tràn) */
+            height: 30px; /* Cố định chiều cao */
+            padding: 0 20px; /* Lề trái và phải cho nội dung bên trong */
+            background-color: black; /* Đổi màu nền sang màu đen */
+            line-height: 30px; /* Chiều cao mỗi dòng văn bản */
+            cursor: pointer; /* Chuyển con trỏ sang hình bàn tay */
+            border-bottom: 1px solid #333; /* Thêm viền để phân cách dễ nhìn */
+        }
+
+        /* Định dạng liên kết (thẻ a) */
+        li a {
+            text-decoration: none; /* Bỏ gạch chân của liên kết */
+            color: white; /* Đổi màu liên kết sang màu trắng */
+            display: block;
+        }
+
+        /* Khi đưa chuột qua phần tử danh sách (li:hover) */
+        li:hover {
+            background-color: #555; /* Đổi màu nền khi trỏ chuột vào */
+        }
+
+        /* Danh sách con (ul bên trong li) */
+        li ul {
+            position: absolute; /* Cố định vị trí danh sách con */
+            top: 0;
+            left: 160px; /* Vị trí xuất hiện của danh sách con (120px width + 40px padding = 160px) */
+            visibility: hidden; /* Ẩn danh sách con mặc định */
+        }
+
+        /* Hiển thị danh sách con khi trỏ chuột vào danh sách cha */
+        li:hover > ul {
+            visibility: visible;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Menu Dropdown Dọc</h2>
+    <p>Di chuột vào mục "Sản phẩm" hoặc "Dịch vụ" để thấy trình đơn thả xuống xuất hiện bên phải.</p>
+    
+    <div id="menu">
+        <ul>
+            <li><a href="#">Trang chủ</a></li>
+            <li><a href="#">Sản phẩm</a>
+                <!-- Danh sách con -->
+                <ul>
+                    <li><a href="#">Laptop</a></li>
+                    <li><a href="#">Điện thoại</a></li>
+                    <li><a href="#">Phụ kiện</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Dịch vụ</a>
+                <!-- Danh sách con -->
+                <ul>
+                    <li><a href="#">Bảo hành</a></li>
+                    <li><a href="#">Sửa chữa</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Liên hệ</a></li>
+        </ul>
+    </div>
+
+</body>
+</html>
