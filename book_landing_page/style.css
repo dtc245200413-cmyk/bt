@@ -1,0 +1,72 @@
+/* Tùy chỉnh CSS phụ trợ cho Bootstrap */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Navbar */
+.navbar {
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.nav-link.active {
+    color: #0d6efd !important; /* Bootstrap primary color */
+    font-weight: bold;
+}
+
+/* Book Cover */
+.book-cover {
+    max-width: 100%;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.book-cover:hover {
+    transform: translateY(-10px);
+}
+
+/* Author Image */
+.author-img {
+    max-width: 300px;
+    height: 300px;
+    object-fit: cover;
+}
+
+/* Feature Cards */
+.feature-card {
+    transition: all 0.3s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1) !important;
+}
+
+/* Price Cards */
+.price-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.price-card:hover {
+    transform: scale(1.03);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1) !important;
+}
+
+.price-card.popular {
+    transform: scale(1.05);
+    z-index: 1;
+}
+
+.price-card.popular:hover {
+    transform: scale(1.08);
+}
+
+/* Responsive Fixes */
+@media (max-width: 991px) {
+    .price-card.popular {
+        transform: scale(1);
+    }
+    
+    .price-card.popular:hover {
+        transform: scale(1.03);
+    }
+}
