@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dropdown Menu Ngang</title>
+    <style>
+        /* Cố định phông chữ cho trang HTML */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
+
+        /* Phân vùng cho trình đơn: chiều cao, đường viền, khoảng cách và màu nền */
+        #menu {
+            height: 40px;
+            background-color: #333;
+            border: 1px solid #222;
+        }
+
+        #menu ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        /* Định nghĩa bộ chọn riêng cho các phần tử trong danh sách */
+        #menu li {
+            float: left; /* Căn ngang các mục chọn */
+            position: relative; /* Dùng để định vị menu con */
+            list-style: none;
+        }
+
+        /* Bộ chọn dành cho các liên kết trong trình đơn */
+        #menu li a {
+            display: block; /* Hiển thị dạng khối */
+            width: 150px; /* Cố định độ rộng */
+            height: 40px; /* Cố định chiều cao */
+            line-height: 40px; /* Căn giữa chữ theo chiều dọc */
+            text-align: center; /* Căn giữa chữ theo chiều ngang */
+            text-decoration: none; /* Bỏ gạch chân */
+            color: white; /* Màu chữ */
+        }
+
+        /* Chuyển màu nền của liên kết sang màu đỏ khi con trỏ được đưa qua */
+        #menu li a:hover {
+            background-color: red;
+        }
+
+        /* Bộ chọn dành cho các danh sách con (trình đơn con) */
+        #menu ul ul {
+            position: absolute; /* Vị trí tuyệt đối so với phần tử li cha */
+            top: 40px; /* Hiển thị ngay bên dưới trình đơn cha (bằng chiều cao trình đơn cha) */
+            left: 0; /* Canh lề trái bằng 0 so với phần tử cha */
+            visibility: hidden; /* Ẩn các danh sách con */
+            padding: 0;
+            margin: 0;
+        }
+
+        /* Trình đơn con sẽ hiển thị mỗi khi con trỏ được đưa qua mục chọn của trình đơn cha */
+        #menu li:hover > ul {
+            visibility: visible;
+        }
+        
+        /* Chỉnh lại màu nền cho các mục trong menu con để phân biệt */
+        #menu ul ul li a {
+            background-color: #444;
+            border-top: 1px solid #555;
+        }
+        
+        #menu ul ul li a:hover {
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Menu Dropdown Hàng Ngang</h2>
+    <p>Di chuột vào các mục trên thanh điều hướng để xem menu con thả xuống (dropdown).</p>
+
+    <div id="menu">
+        <ul>
+            <li><a href="#">Trang chủ</a></li>
+            <li><a href="#">Sản phẩm ▾</a>
+                <!-- Danh sách con -->
+                <ul>
+                    <li><a href="#">Điện thoại</a></li>
+                    <li><a href="#">Máy tính bảng</a></li>
+                    <li><a href="#">Phụ kiện</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Dịch vụ ▾</a>
+                <!-- Danh sách con -->
+                <ul>
+                    <li><a href="#">Thiết kế web</a></li>
+                    <li><a href="#">Bảo trì hệ thống</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Về chúng tôi</a></li>
+            <li><a href="#">Liên hệ</a></li>
+        </ul>
+    </div>
+
+</body>
+</html>
